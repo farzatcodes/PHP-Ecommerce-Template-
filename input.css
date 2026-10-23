@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: 'Inter', Arial, Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    h1, h2, h3, h4, .font-heading {
+        font-family: 'Poppins', 'Inter', Arial, sans-serif;
+    }
+    /* Visible, on-brand focus ring for keyboard users — never remove outline without replacing it */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible,
+    select:focus-visible,
+    [tabindex]:focus-visible {
+        outline: 2px solid #F5106C;
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+    ::selection {
+        background-color: #DB1456;
+        color: #ffffff;
+    }
+}
+
+@font-face {
+    font-family: 'Kalpurush';
+    src: url('../../font/kalpurush.woff2') format('woff2'), url('../../font/kalpurush.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SolaimanLipi';
+    src: url('../../font/SolaimanLipi.woff2') format('woff2'), url('../../font/SolaimanLipi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url('../../font/HindSiliguri-Regular.woff2') format('woff2'), url('../../font/HindSiliguri-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url('../../font/HindSiliguri-Bold.woff2') format('woff2'), url('../../font/HindSiliguri-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 2. Custom Site Styles */
+.search-input:focus {
+    outline: none;
+    border-color: #F5106C;
+    box-shadow: 0 0 0 3px rgba(245, 16, 108, 0.25);
+}
+
+.bengali-text {
+    font-family: 'Kalpurush', 'SolaimanLipi', 'Hind Siliguri', sans-serif;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Animations */
+@keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes slideLeft { 
+    0% { transform: translateX(100%); } 
+    100% { transform: translateX(-100%); } 
+}
+
+.animate-ticker { 
+    display: inline-block; 
+    white-space: nowrap; 
+    animation: slideLeft 15s linear infinite; 
+}

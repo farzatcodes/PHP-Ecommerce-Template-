@@ -1,0 +1,5 @@
+# Pathao OAuth token cache — contains bearer token, never commit
+.pathao_token_cache
+
+# One-time admin setup credential file
+.admin_initial_password

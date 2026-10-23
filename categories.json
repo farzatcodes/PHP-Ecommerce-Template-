@@ -1,0 +1,14 @@
+[
+    {
+        "slug": "men",
+        "name": "Men"
+    },
+    {
+        "slug": "female",
+        "name": "Female"
+    },
+    {
+        "slug": "hot-sales",
+        "name": "Hot Sales"
+    }
+]
